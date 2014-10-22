@@ -12,6 +12,6 @@ ADD supervisor/conf.d/ /etc/supervisor/conf.d/
 ADD nginx/ /etc/nginx/
 ADD run.sh /usr/local/bin/run.sh
 
-VOLUME ["/data/app/"]
+VOLUME ["/data/app/", "/data/static/"]
 
 CMD ["/bin/sh", "-e", "/usr/local/bin/run.sh"]
