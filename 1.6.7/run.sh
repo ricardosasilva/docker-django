@@ -13,4 +13,5 @@ fi
 chown www-data:www-data -R ${APP_ROOT}
 chown www-data:www-data -R ${STATIC_ROOT}
 
+python ${APP_ROOT}/manage.py collectstatic --noinput
 supervisord -n -c /etc/supervisor/supervisord.conf
